@@ -1,0 +1,144 @@
+:root{
+  --primary: #0b5fff;     
+  --primary-600:#0846c0;
+  --bg: #0f172a;          
+  --surface:#111827;      
+  --text:#e5e7eb;         
+  --muted:#9ca3af;        
+  --card:#0b1220;         
+  --stroke:#1f2937;       
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(0,0,0,.35);
+  --maxw: 1100px;
+}
+
+*{ box-sizing: border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+  background: linear-gradient(180deg, #0a0f1e 0%, #0f172a 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+
+.container{ width: min(var(--maxw), 92%); margin-inline: auto; }
+.sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+
+
+.site-header{
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(8px);
+  background: rgba(15,23,42,.85);
+  border-bottom: 1px solid var(--stroke);
+}
+.header__wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  padding: .8rem 0;
+}
+.brand{ display:flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--text); }
+.brand__logo{
+  width: 36px; height: 36px; border-radius: 50%;
+  display:grid; place-items:center;
+  background: radial-gradient(circle at 30% 30%, var(--primary) 0%, var(--primary-600) 60%, #02113a 100%);
+  font-weight: 800;
+  box-shadow: 0 6px 16px rgba(11,95,255,.45);
+}
+.brand__text{ font-weight:700; letter-spacing:.4px; }
+
+.main-nav .nav__list{
+  list-style:none; display:flex; gap:1rem; padding:0; margin:0;
+}
+.main-nav a{
+  color: var(--text); text-decoration:none; padding:.5rem .75rem;
+  border-radius: 10px; transition: background .2s ease, color .2s ease;
+}
+.main-nav a:hover{ background: #0b1220; color:#fff; }
+
+
+.hero{
+  min-height: 68vh;
+  display:grid; align-items:center;
+  background:
+    radial-gradient(80rem 40rem at 20% -10%, rgba(11,95,255,.25), transparent 55%),
+    radial-gradient(80rem 40rem at 100% 10%, rgba(8,70,192,.22), transparent 50%);
+  border-bottom: 1px solid var(--stroke);
+}
+.hero__content{ padding: 4rem 0 3rem; text-align:center; }
+.hero h1{ font-size: clamp(2rem, 4vw, 3rem); margin:0 0 .6rem; }
+.lead{ color:var(--muted); max-width: 60ch; margin: 0 auto 1.2rem; }
+
+.btn{
+  display:inline-block; text-decoration:none; color:var(--text);
+  padding: .75rem 1rem; border:1px solid var(--stroke);
+  border-radius: 999px; transition: transform .12s ease, background .2s;
+}
+.btn:hover{ transform: translateY(-1px); background:#0b1220; }
+.btn--primary{
+  background: linear-gradient(135deg, var(--primary), var(--primary-600));
+  border-color: transparent; color:#fff; box-shadow: 0 10px 20px rgba(11,95,255,.25);
+}
+.btn--primary:hover{ filter: brightness(1.05); }
+
+
+.section{ padding: 3rem 0; }
+.section__intro{ color:var(--muted); margin-top: .5rem; }
+
+
+.cards{
+  display:grid; gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1.5rem;
+}
+.card{
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display:flex; flex-direction:column;
+}
+.card img{ width:100%; height: 240px; object-fit: cover; }
+.card__body{ padding: 1rem; }
+.card h3{ margin: .2rem 0 .4rem; }
+.card p{ color: var(--muted); margin:0; }
+
+
+.grid-2{
+  display:grid; gap:1rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px){
+  .grid-2{ grid-template-columns: 1fr 1fr; }
+}
+.panel{
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+
+.section--aside{
+  background: linear-gradient(180deg, rgba(11,18,32,.6), rgba(11,18,32, .2));
+  border-block: 1px solid var(--stroke);
+}
+.section--aside p{ max-width: none; }
+
+
+
+.site-footer{
+  border-top: 1px solid var(--stroke);
+  background: rgba(17,24,39,.6);
+}
+.footer__wrap{
+  display:flex; align-items:center; justify-content:space-between; gap:.75rem;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+}
+.social{
+  display:flex; gap: .8rem; list-style:none; margin:0; padding:0;
+}
+.social a{ color: var(--muted); text-decoration:none; }
+.social a:hover{ color:#fff; }
