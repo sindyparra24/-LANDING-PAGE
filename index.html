@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marvel Heroes | Landing</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+  <header id="inicio" class="site-header">
+    <div class="container header__wrap">
+      <a class="brand" href="#inicio" aria-label="Inicio Marvel Heroes">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Marvel_Logo.svg" 
+             alt="Logo Marvel" width="90" height="auto">
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#presentacion">Presentación</a></li>
+          <li><a href="#heroes">Héroes</a></li>
+          <li><a href="#mision-vision">Misión & Visión</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="presentacion" class="hero" aria-labelledby="hero-title">
+      <div class="container hero__content">
+        <h1 id="hero-title">El poder de los héroes a un clic</h1>
+        <p class="lead">
+          Descubre a los Vengadores más icónicos y conoce nuestros servicios:
+          contenidos educativos, eventos temáticos y experiencias inmersivas.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#heroes">Ver héroes</a>
+          <a class="btn" href="#contacto">Contáctanos</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="heroes" class="section" aria-labelledby="heroes-title">
+      <div class="container">
+        <h2 id="heroes-title">Héroes principales</h2>
+        <p class="section__intro">Conoce a nuestros protagonistas.</p>
+
+        <div class="cards">
+          <article class="card">
+            <img src="https://images.hdqwalls.com/download/iron-man-flying-5k-yz-2560x1440.jpg" alt="Iron Man volando con su armadura" />
+            <div class="card__body">
+              <h3>Iron Man</h3>
+              <p>Ingenio, tecnología avanzada y liderazgo audaz. Experiencias STEM y charlas inspiradoras.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.hdqwalls.com/wallpapers/bthumb/captain-america-with-mjolnir-n9.jpg" alt="Capitán América sosteniendo el martillo de Thor" />
+            <div class="card__body">
+              <h3>Capitán América</h3>
+              <p>Valores, estrategia y trabajo en equipo. Talleres de liderazgo y ética.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.hdqwalls.com/wallpapers/bthumb/thor-in-love-and-thunder-5k-9n.jpg" alt="Thor con el martillo Mjölnir" />
+            <div class="card__body">
+              <h3>Thor</h3>
+              <p>Fuerza, mística y mitología nórdica. Exhibiciones y storytelling épico.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.hdqwalls.com/wallpapers/bthumb/black-widow-2023-ks.jpg" alt="Black Widow en pose táctica" />
+            <div class="card__body">
+              <h3>Black Widow</h3>
+              <p>Técnica, agilidad y táctica. Clínicas de disciplina y enfoque.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.hdqwalls.com/wallpapers/bthumb/marvel-hulk-avenger-in-action-ch.jpg" alt="Hulk mostrando su fuerza" />
+            <div class="card__body">
+              <h3>Hulk</h3>
+              <p>Ciencia, control emocional y resiliencia. Activaciones sobre bienestar y mente.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mision-vision" class="section" aria-labelledby="mv-title">
+      <div class="container grid-2">
+        <h2 id="mv-title" class="sr-only">Misión y Visión</h2>
+
+        <article class="panel">
+          <h3>Misión</h3>
+          <p>
+            Inspirar a fans y estudiantes mediante experiencias educativas y
+            eventos temáticos que promuevan valores de colaboración, innovación y
+            valentía, tomando a los superhéroes como referentes positivos.
+          </p>
+        </article>
+
+        <article class="panel">
+          <h3>Visión</h3>
+          <p>
+            Convertirnos en la plataforma líder de experiencias heroicas en
+            Latinoamérica, conectando entretenimiento y aprendizaje con impacto social.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="section section--aside" aria-labelledby="aside-title">
+      <div class="container">
+        <h2 id="aside-title">Dato curioso</h2>
+        <p>
+          El primer equipo de los Vengadores reunió a héroes con habilidades
+          muy distintas. En nuestra plataforma replicamos esa diversidad con
+          actividades para ciencia, arte y deporte.
+        </p>
+      </div>
+    </aside>
+
+    <section id="contacto" class="section" aria-labelledby="contacto-title">
+      <div class="container">
+        <h2 id="contacto-title">Contáctanos</h2>
+        <p class="section__intro">Escríbenos y armemos tu experiencia heroica.</p>
+
+        <form class="contacto" action="" method="post">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" required minlength="2"
+                     placeholder="Tu nombre completo">
+            </div>
+
+            <div class="form-field">
+              <label for="email">Correo electrónico</label>
+              <input id="email" name="email" type="email" required
+                     placeholder="tunombre@mail.com">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required
+                      placeholder="Cuéntanos qué experiencia buscas"></textarea>
+          </div>
+
+          <div class="form-check">
+            <input id="acepto" type="checkbox" required>
+            <label for="acepto">Acepto la política de privacidad</label>
+          </div>
+
+          <button class="btn btn--primary" type="submit">Enviar</button>
+          <p class="form-note">
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__wrap">
+      <p>© <span id="year"></span> Marvel Heroes · Sindy Parra Villacis</p>
+      <nav aria-label="Redes sociales">
+        <ul class="social">
+          <li><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="28"></li>
+          <li><img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="28"></li>
+          <li><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="X" width="28"></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
